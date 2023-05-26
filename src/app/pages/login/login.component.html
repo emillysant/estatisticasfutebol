@@ -1,1 +1,10 @@
-<p>login works!</p>
+<div style="display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: aquamarine; height: 100vh;">
+  <label for="text-key">Informe sua API-KEY</label>
+  <div>
+    <input (keyup.enter)="login()" type="text" name="key" id="text-key" [(ngModel)]="user.apiKey">
+    <button (click)="login()" >Entrar</button>
+  </div>
+  <p>Ainda não possue uma?</p>
+  <p>Va até <a href="https://www.api-football.com/" >API-FOOTBALL</a> e faça um login</p>
+  <p>Em Account é possivel encontrar sua chave de acesso</p>
+</div>
