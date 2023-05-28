@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class="container background-image">
+  <mat-toolbar color="primary" class="example-header">
+    <span>Olá, {{firstname}}</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" matTooltip="logout">
+      <mat-icon> logout</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <h1>Bem Vindo ao FREAFMIGS GTABULES</h1>
+    <h3>Aqui vc vai encontrar informações de qualquer jogo de futebol</h3>
+    <app-countries></app-countries>
+  </div>
+  <mat-toolbar color="primary" class="example-footer">
+    <img height="50px" src="../../../assets/logos/logodosite.jpg" />
+    <span class="example-spacer"></span>
+    <small>&copy; 2023 Freafmigs Gtabules. Todos os direitos reservados.</small>
+  </mat-toolbar>
+</div>

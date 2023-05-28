@@ -1,3 +1,5 @@
 export class User {
-  apiKey: string = "";
+  firstname: string = "";
+  lastname: string = "";
+  email: string = "";
 }

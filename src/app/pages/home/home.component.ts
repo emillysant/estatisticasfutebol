@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  firstname!: string | null;
+  countriesPage: boolean = false
 
-  constructor() { }
+  constructor(
+  ) {
+    this.firstname = localStorage.getItem('firstname')
+    console.log('usuario nome: ', this.firstname)
+  }
 
   ngOnInit(): void {
   }

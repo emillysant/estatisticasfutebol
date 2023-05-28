@@ -1,0 +1,15 @@
+<div>
+  <button mat-raised-button color="primary" (click)="findCountries()">
+    Países
+    <span class="material-icons">
+      flag_circle
+    </span>
+  </button>
+
+  <div #countries *ngIf="!loading ">
+    <!-- <div *ngFor="let country of countries" >
+    </div> -->
+    countries
+
+  </div>
+</div>
