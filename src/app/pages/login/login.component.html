@@ -1,10 +1,19 @@
-<div style="display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: aquamarine; height: 100vh;">
-  <label for="text-key">Informe sua API-KEY</label>
-  <div>
-    <input (keyup.enter)="login()" type="text" name="key" id="text-key" [(ngModel)]="user.apiKey">
-    <button (click)="login()" >Entrar</button>
+<div class=" container background-image">
+  <h1 style="padding: 2rem;">Encontre as informações do seu time!</h1>
+  <div style="min-width: 30vw; max-width: 300px; padding: 2rem;">
+    <div style="display: flex; flex-direction: column;">
+      <mat-form-field class="example-form-field">
+        <mat-label>Informe sua API-KEY</mat-label>
+        <input matInput type="text" (keyup.enter)="login()" type="text" name="key" id="text-key"
+          [(ngModel)]="apiKey">
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="login()">Entrar</button>
+    </div>
+
+    <div style="display: flex; align-items: center;justify-content: center; flex-direction: column; margin-top: 2rem;">
+      <small>Ainda não possue uma?</small>
+      <small>Clique em <a href="https://www.api-football.com/">API-FOOTBALL</a> faça um login.</small>
+      <small>Em Account clique em My Acess e encontre sua chave de acesso</small>
+    </div>
   </div>
-  <p>Ainda não possue uma?</p>
-  <p>Va até <a href="https://www.api-football.com/" >API-FOOTBALL</a> e faça um login</p>
-  <p>Em Account é possivel encontrar sua chave de acesso</p>
 </div>

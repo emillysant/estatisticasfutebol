@@ -26,3 +26,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # tradeTechnologyChallenge
+
+## API Documentation
+
+https://www.api-football.com//documentation-v3#section/Authentication/API-SPORTS-Account
+
+## Subscribe for acess key
+
+https://dashboard.api-football.com/register

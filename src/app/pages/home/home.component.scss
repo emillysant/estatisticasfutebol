@@ -1,0 +1,30 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75); /* Define a cor de fundo com transparência */
+  z-index: -1; /* Empurra o elemento pseudo-elemento para trás */
+}
+
+.background-image {
+  position: relative;
+  z-index: 1; /* Coloca o conteúdo acima do elemento pseudo-elemento */
+  background-image: url('../../../assets/imgs/desenhoBolaFutebol.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.background-image {
+  background-image: url('../../../assets/imgs/campodefutebol.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
