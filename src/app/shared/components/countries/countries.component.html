@@ -1,15 +1,19 @@
-<div>
+<div style="text-align: center;">
   <button mat-raised-button color="primary" (click)="findCountries()">
     Países
     <span class="material-icons">
       flag_circle
     </span>
   </button>
-
-  <div #countries *ngIf="!loading ">
-    <!-- <div *ngFor="let country of countries" >
-    </div> -->
-    countries
-
+  <div class="container">
+    <div *ngFor="let country of this.arrayCountries" class="content_country">
+      <mat-card class="card_country">
+        <div>
+          <div><img width="100px" [src]="country.flag" [alt]="country.name"/></div>
+          <div>{{country.name}}</div>
+        </div>
+      </mat-card>
+    </div>
   </div>
+
 </div>
