@@ -25,5 +25,25 @@ export class RequestService {
     return this.httpClient.get<any>(`${this.baseUrl}/countries`, { headers, observe: 'response' })
   }
 
+  loadingLeagues(apikey:  any) {
+    const headers = new HttpHeaders().set('x-apisports-key', apikey! )
+    return this.httpClient.get<any>(`${this.baseUrl}/leagues`, {headers, observe : 'response'})
+  }
+
+
+  loadingTeams(league:string, season:string, apikey: any){
+    const headers = new HttpHeaders().set('x-apisports-key', apikey! )
+    return this.httpClient.get<any>(`${this.baseUrl}/teams?league=${league}&season=${season}`,{headers, observe : 'response'})
+  }
+
+  checkPlayers(league:string, season:string, idTeam: string, apikey: any){
+    const headers = new HttpHeaders().set('x-apisports-key', apikey! )
+    return this.httpClient.get<any>(`${this.baseUrl}/players?season=${season}&team=${idTeam}&league=${league}`,{headers, observe : 'response'})
+  }
+
+  checkStatics(league:string, season:string, idTeam: string, apikey: any) {
+    const headers = new HttpHeaders().set('x-apisports-key', apikey! )
+    return this.httpClient.get<any>(`${this.baseUrl}/statistics?season=${season}&team=${idTeam}&league=39`,{headers, observe: 'response'})
+  }
 
 }

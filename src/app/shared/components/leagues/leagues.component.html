@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+  <h3>Selecione um campeonato: </h3>
+  <div class="container">
+    <div *ngFor="let league of arrayLeagues" class="content_country">
+      <mat-card class="card_country" (click)="selectLeague(league)">
+        <div>
+          <div><img class="img_league" [src]="league.league.logo" [alt]="league.league.name" /></div>
+          <div>{{league.league.name}}</div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

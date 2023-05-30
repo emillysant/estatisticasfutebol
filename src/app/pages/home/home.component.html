@@ -3,13 +3,27 @@
     <span>Olá, {{firstname}}</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" matTooltip="logout">
-      <mat-icon> logout</mat-icon>
+      <mat-icon>logout</mat-icon>
     </button>
   </mat-toolbar>
   <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 1rem;">
-    <h1>Bem Vindo ao FREAFMIGS GTABULES</h1>
+    <h1>Bem Vindo ao FREAFMIGS GTABULES!</h1>
     <h3>Aqui vc vai encontrar informações de qualquer jogo de futebol</h3>
-    <app-countries></app-countries>
+    <button mat-raised-button color="primary" (click)="changeComponentStatus('countries')">
+      Start
+      <span class="material-icons">
+        flag_circle
+      </span>
+    </button>
+    <div *ngIf="this.showComponent[0].status">
+      <app-countries (countrySelected)="selectionCountry($event)"></app-countries>
+    </div>
+    <div *ngIf="this.showComponent[1].status">
+      <app-leagues [countrySelected]="countrySelected" (leagueSelected)="selectionLeague($event)"></app-leagues>
+    </div>
+    <div *ngIf="this.showComponent[2].status">
+      <app-seasons [leagueSelected]="leagueSelected"></app-seasons>
+    </div>
   </div>
   <mat-toolbar color="primary" class="example-footer">
     <img height="50px" src="../../../assets/logos/logodosite.jpg" />

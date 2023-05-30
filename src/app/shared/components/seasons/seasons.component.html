@@ -1,0 +1,13 @@
+<div style="width: 100vw;">
+  <div>{{leagueSelected.country.name}}</div>
+  <div>{{leagueSelected.league.name}}</div>
+  <div *ngFor="let season of leagueSelected.seasons" >
+    <div>
+      <div>{{season.start}}</div>
+      <div>{{season.end}}</div>
+      <div>{{season.year}}</div>
+      <div>{{season.current}}</div>
+    </div>
+
+  </div>
+</div>
