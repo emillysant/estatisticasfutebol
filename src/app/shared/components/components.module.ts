@@ -4,6 +4,8 @@ import { CountriesComponent } from './countries/countries.component';
 import { MaterialModule } from '../material/material.module';
 import { LeaguesComponent } from './leagues/leagues.component';
 import { SeasonsComponent } from './seasons/seasons.component';
+import { TeamsComponent } from './teams/teams.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 
@@ -11,7 +13,9 @@ import { SeasonsComponent } from './seasons/seasons.component';
   declarations: [
     CountriesComponent,
     LeaguesComponent,
-    SeasonsComponent
+    SeasonsComponent,
+    TeamsComponent,
+    StatisticsComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,9 @@ import { SeasonsComponent } from './seasons/seasons.component';
   exports: [
     CountriesComponent,
     LeaguesComponent,
-    SeasonsComponent
+    SeasonsComponent,
+    TeamsComponent,
+    StatisticsComponent
   ]
 })
 export class ComponentsModule { }

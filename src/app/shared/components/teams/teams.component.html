@@ -1,0 +1,15 @@
+<div style="text-align: center;">
+  <h3>Selecione um Time</h3>
+  <div class="container">
+    <div *ngFor="let team of arrayTeams" class="content_country">
+      <mat-card class="card_country" (click)="selectTeam(team.team)">
+        <div>
+          <div><img class="img_league" [src]="team.team.logo" [alt]="team.team.name" /></div>
+          <div>{{team.team.name}}</div>
+          <div>{{team.team.founded}}</div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

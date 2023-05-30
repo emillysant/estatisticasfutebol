@@ -8,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   firstname!: string | null;
   countriesPage: boolean = false;
+
   countrySelected!: any;
   leagueSelected!: any;
+  seasonSelected!: any;
+  teamSelected!: any;
+
   showComponent: any = [
     { id: 0, name: 'countries', status: false },
     { id: 1, name: 'leagues', status: false },
     { id: 2, name: 'seasons', status: false },
-    { id: 3, name: 'players', status: false },
-    { id: 4, name: 'estatistics', status: false }
+    { id: 3, name: 'teams', status: false },
+    { id: 4, name: 'statistics', status: false }
   ];
 
 
@@ -49,5 +53,17 @@ export class HomeComponent implements OnInit {
     this.leagueSelected = $event
     console.log("imprimindo league selecionado: ", this.leagueSelected)
     this.changeComponentStatus('seasons')
+  }
+
+  selectionSeason($event: any) {
+    this.seasonSelected = $event
+    console.log("Temporada selecionada: ", this.seasonSelected)
+    this.changeComponentStatus('teams')
+  }
+
+  selectionTeam($event: any) {
+    this.teamSelected = $event
+    console.log("time selecionado: ", this.teamSelected)
+    this.changeComponentStatus('statistics')
   }
 }

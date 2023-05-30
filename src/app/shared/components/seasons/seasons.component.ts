@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-seasons',
@@ -7,10 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SeasonsComponent implements OnInit {
   @Input() leagueSelected!: any;
+  @Output() seasonSelected: EventEmitter<any> = new EventEmitter();
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectionSeason(sesonYear: any) {
+    this.seasonSelected.emit(sesonYear)
   }
 
 }

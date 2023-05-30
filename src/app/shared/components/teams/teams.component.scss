@@ -1,3 +1,4 @@
+
 .container {
   display: flex;
   align-items: center;
@@ -21,11 +22,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .card_country:hover {
   cursor: pointer;
   background-color: rgba(63, 81, 181, 0.2);
   border: 2px solid #3F51B5;
+}
+
+.img_league {
+  max-height: 80px;
+  max-width: 90px;
 }
