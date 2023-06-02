@@ -1,6 +1,7 @@
 # TradeTechnologyChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
+<p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.</p>
+<p>Project related to the selection process of trade technology. In this web application it is possible to see game statistics of any football team</p>
 
 ## Development server
 
