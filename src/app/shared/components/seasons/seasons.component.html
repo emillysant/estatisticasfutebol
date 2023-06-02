@@ -1,0 +1,17 @@
+<div style="width: 100vw; text-align: center;">
+  <h3>Selecione uma Temporada</h3>
+  <div class="container">
+    <div *ngFor="let season of leagueSelected.seasons" class="content_country">
+      <mat-card  class="card_country" (click)="selectionSeason(season.year)">
+        <div>{{leagueSelected.country.name}}</div>
+        <div>{{leagueSelected.league.name}}</div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div><strong>{{season.year}}</strong></div>
+          <div>{{season.start}}</div>
+          <div>{{season.end}}</div>
+          <!-- <div>{{season.current}}</div> -->
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

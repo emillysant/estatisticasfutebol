@@ -1,13 +1,14 @@
 <div style="text-align: center;">
-  <button mat-raised-button color="primary" (click)="findCountries()">
+  <h3>Selecione um País</h3>
+  <!-- <button mat-raised-button color="primary" (click)="findCountries()">
     Países
     <span class="material-icons">
       flag_circle
     </span>
-  </button>
+  </button> -->
   <div class="container">
     <div *ngFor="let country of this.arrayCountries" class="content_country">
-      <mat-card class="card_country">
+      <mat-card class="card_country" (click)="selectCountry(country)">
         <div>
           <div><img width="100px" [src]="country.flag" [alt]="country.name"/></div>
           <div>{{country.name}}</div>

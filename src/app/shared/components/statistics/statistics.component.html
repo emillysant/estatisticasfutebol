@@ -1,0 +1,89 @@
+<div>
+  <div *ngIf="statistics != undefined">
+    <div style="display: flex; flex-direction: row;">
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+        <img width="60px" [src]="statistics.team.logo" [alt]="statistics.team.name" />
+        <div>{{statistics.team.name}}</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;" >
+        <div>Liga </div>
+        <div>{{statistics.league.name}}</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+        <div>Temporada </div>
+        <div>{{statistics.league.season}}</div>
+      </div>
+    </div>
+    <table border="1px" cellpadding="5px" cellspacing="0" ID="alter">
+      <tr>
+        <th></th>
+        <th>HOME</th>
+        <th>AWAY</th>
+        <th>ALL</th>
+      </tr>
+      <tr>
+        <td>Games played</td>
+        <td>{{statistics.fixtures.draws.home}}</td>
+        <td>{{statistics.fixtures.draws.away}}</td>
+        <td>{{statistics.fixtures.draws.total}}</td>
+      </tr>
+      <tr>
+        <td>Wins</td>
+        <td>{{statistics.fixtures.wins.home}}</td>
+        <td>{{statistics.fixtures.wins.away}}</td>
+        <td>{{statistics.fixtures.wins.total}}</td>
+      </tr>
+      <tr>
+        <td>Draws</td>
+        <td>{{statistics.fixtures.draws.home}}</td>
+        <td>{{statistics.fixtures.draws.away}}</td>
+        <td>{{statistics.fixtures.draws.total}}</td>
+      </tr>
+      <tr>
+        <td>Loss</td>
+        <td>{{statistics.fixtures.loses.home}}</td>
+        <td>{{statistics.fixtures.loses.away}}</td>
+        <td>{{statistics.fixtures.loses.total}}</td>
+      </tr>
+      <tr class="dif">
+        <td>GOALS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Goals For</td>
+        <td>{{statistics.goals.for.total.home}}</td>
+        <td>{{statistics.goals.for.total.away}}</td>
+        <td>{{statistics.goals.for.total.total}}</td>
+      </tr>
+      <tr>
+        <td>Goals Against</td>
+        <td>{{statistics.goals.against.total.home}}</td>
+        <td>{{statistics.goals.against.total.away}}</td>
+        <td>{{statistics.goals.against.total.total}}</td>
+      </tr>
+      <tr class="dif">
+        <td>GOALS AVARAGE</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Goals For</td>
+        <td>{{statistics.goals.for.average.home}}</td>
+        <td>{{statistics.goals.for.average.away}}</td>
+        <td>{{statistics.goals.for.average.total}}</td>
+      </tr>
+      <tr>
+        <td>Goals Against</td>
+        <td>{{statistics.goals.against.average.home}}</td>
+        <td>{{statistics.goals.against.average.away}}</td>
+        <td>{{statistics.goals.against.average.total}}</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+table#alter tr td {
+  /* Toda a tabela com fundo creme */
+  background: #eee;
+}
+table#alter tr.dif td {
+  background: transparent; /* Linhas com fundo cinza */
+}
+
+table#alter {
+  width: -webkit-fill-available;
+}
