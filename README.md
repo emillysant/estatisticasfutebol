@@ -34,3 +34,10 @@ https://www.api-football.com//documentation-v3#section/Authentication/API-SPORTS
 ## Subscribe for acess key
 
 https://dashboard.api-football.com/register
+
+## Pages
+### Login
+![image](https://github.com/emillysant/tradeTechnologyChallenge/assets/70452464/97075462-223a-437f-a167-82e4b081141b)
+### Home
+![image](https://github.com/emillysant/tradeTechnologyChallenge/assets/70452464/f963c449-4bf2-43da-ac39-0899453b61e1)
+
