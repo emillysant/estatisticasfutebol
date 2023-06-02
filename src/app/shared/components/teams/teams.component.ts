@@ -10,6 +10,7 @@ export class TeamsComponent implements OnInit {
   @Input() seasonSelected!: any;
   @Input() leagueSelected!: any;
   @Output() teamSelected: EventEmitter<any> = new EventEmitter();
+  @Output() loading: EventEmitter<any> = new EventEmitter();
 
   apiKey!: any;
   arrayTeams!: any;
@@ -25,9 +26,11 @@ export class TeamsComponent implements OnInit {
   }
 
   findTeams (leagueSelected: any, seasonSelected: any, apiKey: any) {
+    this.loading.emit(true)
     this.requestService.loadingTeams(leagueSelected, seasonSelected, apiKey).subscribe((response: any) => {
       console.log("Teams: ", response)
       this.arrayTeams = response.body.response
+      this.loading.emit(false)
     })
   }
 

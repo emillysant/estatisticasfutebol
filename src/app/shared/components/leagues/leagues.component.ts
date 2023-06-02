@@ -12,6 +12,7 @@ export class LeaguesComponent implements OnInit {
 
   @Input() countrySelected!: Country;
   @Output() leagueSelected: EventEmitter<League> = new EventEmitter();
+  @Output() loading: EventEmitter<any> = new EventEmitter();
 
   apiKey!: string | null
   arrayLeagues: any = []
@@ -27,9 +28,11 @@ export class LeaguesComponent implements OnInit {
   }
 
   findLeagues(){
+    this.loading.emit(true)
     this.requestService.loadingLeagues(this.apiKey).subscribe((response: any) => {
         this.arrayLeagues = response.body.response.filter((obj: any) => obj.country.name === this.countrySelected.name)
         console.log("Leagues: ", this.arrayLeagues)
+        this.loading.emit(false)
       }
     )
   }

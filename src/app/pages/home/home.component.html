@@ -2,7 +2,7 @@
   <mat-toolbar color="primary" class="example-header">
     <span>Olá, {{firstname}}</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" matTooltip="logout">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" matTooltip="logout" (click)="logout()">
       <mat-icon>logout</mat-icon>
     </button>
   </mat-toolbar>
@@ -15,20 +15,21 @@
         flag_circle
       </span>
     </button>
+    <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
     <div *ngIf="this.showComponent[0].status">
-      <app-countries (countrySelected)="selectionCountry($event)"></app-countries>
+      <app-countries (countrySelected)="selectionCountry($event)" (loading)="loading($event)"></app-countries>
     </div>
     <div *ngIf="this.showComponent[1].status">
-      <app-leagues [countrySelected]="countrySelected" (leagueSelected)="selectionLeague($event)"></app-leagues>
+      <app-leagues [countrySelected]="countrySelected" (leagueSelected)="selectionLeague($event)" (loading)="loading($event)" ></app-leagues>
     </div>
     <div *ngIf="this.showComponent[2].status">
-      <app-seasons [leagueSelected]="leagueSelected" (seasonSelected)="selectionSeason($event)"></app-seasons>
+      <app-seasons [leagueSelected]="leagueSelected" (seasonSelected)="selectionSeason($event)" (loading)="loading($event)"></app-seasons>
     </div>
     <div *ngIf="this.showComponent[3].status">
-      <app-teams [seasonSelected]="seasonSelected" [leagueSelected]="leagueSelected" (teamSelected)="selectionTeam($event)" ></app-teams>
+      <app-teams [seasonSelected]="seasonSelected" [leagueSelected]="leagueSelected" (teamSelected)="selectionTeam($event)"  (loading)="loading($event)" ></app-teams>
     </div>
     <div *ngIf="this.showComponent[4].status">
-      <app-statistics></app-statistics>
+      <app-statistics [teamSelected]="teamSelected.id" [leagueSelected]="leagueSelected.league.id" [seasonSelected]="seasonSelected" (loading)="loading($event)"></app-statistics>
     </div>
   </div>
   <mat-toolbar color="primary" class="example-footer">

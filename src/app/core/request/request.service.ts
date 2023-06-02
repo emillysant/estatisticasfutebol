@@ -36,14 +36,14 @@ export class RequestService {
     return this.httpClient.get<any>(`${this.baseUrl}/teams?league=${league}&season=${season}`,{headers, observe : 'response'})
   }
 
-  checkPlayers(league:string, season:string, idTeam: string, apikey: any){
+  loadingPlayers(league:string, season:string, idTeam: string, apikey: any){
     const headers = new HttpHeaders().set('x-apisports-key', apikey! )
     return this.httpClient.get<any>(`${this.baseUrl}/players?season=${season}&team=${idTeam}&league=${league}`,{headers, observe : 'response'})
   }
 
-  checkStatics(league:string, season:string, idTeam: string, apikey: any) {
+  loadingStatics(league:string, season:string, idTeam: string, apikey: any) {
     const headers = new HttpHeaders().set('x-apisports-key', apikey! )
-    return this.httpClient.get<any>(`${this.baseUrl}/statistics?season=${season}&team=${idTeam}&league=39`,{headers, observe: 'response'})
+    return this.httpClient.get<any>(`${this.baseUrl}/teams/statistics?season=${season}&team=${idTeam}&league=${league}`,{headers, observe: 'response'})
   }
 
 }

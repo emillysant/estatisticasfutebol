@@ -8,11 +8,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SeasonsComponent implements OnInit {
   @Input() leagueSelected!: any;
   @Output() seasonSelected: EventEmitter<any> = new EventEmitter();
-
+  @Output() loading: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+    this.loading.emit(false)
   }
 
   selectionSeason(sesonYear: any) {

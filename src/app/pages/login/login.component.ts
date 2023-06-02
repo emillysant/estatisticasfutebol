@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         this.requestService.autorizationCheck(true);
         localStorage.setItem('apiKey', this.apiKey);
         localStorage.setItem('firstname', this.user.firstname)
-        this.router.navigate(['home/countries']);
+        this.router.navigate(['home']);
         console.log("Usuário Logado: ", this.user);
       } else {
         this.error = {

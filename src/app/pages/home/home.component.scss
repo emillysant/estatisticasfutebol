@@ -6,7 +6,7 @@
   height: 100vh;
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 8fr 0.9fr;
 }
 
 .container::before {

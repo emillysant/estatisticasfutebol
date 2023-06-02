@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthGuard } from './core/guard/auth.guard';
 import { LoginModule } from './pages/login/login.module';
 import { HomeModule } from './pages/home/home.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeModule } from './pages/home/home.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     LoginModule,
-    HomeModule
+    HomeModule,
+    NgxSpinnerModule,
   ],
   providers: [
     AuthGuard,

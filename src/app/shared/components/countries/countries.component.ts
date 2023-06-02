@@ -9,10 +9,10 @@ import { Country } from '../../interfaces/Country';
 })
 export class CountriesComponent implements OnInit {
   @Output() countrySelected: EventEmitter<Country> = new EventEmitter();
+  @Output() loading: EventEmitter<any> = new EventEmitter();
 
   arrayCountries: any = []
   apiKey!: string | null
-  loading = false;
 
   constructor(
     private requestService: RequestService
@@ -26,11 +26,11 @@ export class CountriesComponent implements OnInit {
   }
 
   findCountries() {
-    this.loading = true;
+    this.loading.emit(true)
     this.requestService.loadingCountries(this.apiKey).subscribe((response: any) => {
       this.arrayCountries = response.body.response;
       console.log("response arrayCountries: ", this.arrayCountries)
-      this.loading = false;
+      this.loading.emit(false)
     })
   }
 
