@@ -15,7 +15,6 @@
         flag_circle
       </span>
     </button>
-    <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
     <div *ngIf="this.showComponent[0].status">
       <app-countries (countrySelected)="selectionCountry($event)" (loading)="loading($event)"></app-countries>
     </div>

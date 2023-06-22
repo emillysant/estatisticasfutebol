@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +25,6 @@ export class HomeComponent implements OnInit {
 
 
   constructor(
-    private spinner: NgxSpinnerService,
     private router: Router
   ) {
     this.firstname = localStorage.getItem('firstname')
@@ -36,7 +34,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
-      this.spinner.hide();
     }, 100000);
   }
 
@@ -78,9 +75,7 @@ export class HomeComponent implements OnInit {
   loading($event: any) {
     console.log("loading; ", $event)
     if ($event) {
-      this.spinner.show();
     } else {
-      this.spinner.hide();
     }
   }
 

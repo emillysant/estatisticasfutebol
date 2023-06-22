@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -12,7 +11,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     CommonModule,
     MaterialModule,
     ComponentsModule,
-    NgxSpinnerModule,
   ],
   exports: [
     HomeComponent
