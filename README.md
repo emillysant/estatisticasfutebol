@@ -42,3 +42,6 @@ https://dashboard.api-football.com/register
 ### Home
 ![image](https://github.com/emillysant/tradeTechnologyChallenge/assets/70452464/f963c449-4bf2-43da-ac39-0899453b61e1)
 
+## Deploy
+
+https://estatisticas-futebol.onrender.com
